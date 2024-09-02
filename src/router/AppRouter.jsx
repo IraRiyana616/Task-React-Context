@@ -20,7 +20,7 @@ export default function AppRouter() {
           path="/"
           element={
             <PrivateRoute isAuthenticated={isAuthenticated}>
-              <Home />
+              <Login />
             </PrivateRoute>
           }
         />
