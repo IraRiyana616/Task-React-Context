@@ -28,11 +28,16 @@ const Media = () => {
   ];
 
   return (
-    <div className="" id="media" style={{ marginTop: '120px' }}>
+    <div
+      className="bg-white dark:bg-gray-700"
+      id="media"
+      style={{ marginTop: '85px' }}>
       <Navbar />
       <div className="text-center md:w-1/2 mx-auto">
-        <h2 className="text-4xl text-neutralDGrey font-semibold mb-4">Media</h2>
-        <p className="text-sm text-neutralGrey mb-8 md:w-3/4 mx-auto">
+        <h2 className="py-5 text-4xl text-neutralDGrey dark:text-white font-semibold mb-4">
+          Media
+        </h2>
+        <p className="text-sm text-neutralGrey dark:text-white mb-8 md:w-3/4 mx-auto ">
           Informasi Seputar PaDi UMKM
         </p>
       </div>
@@ -45,11 +50,11 @@ const Media = () => {
               alt={media.title}
               className="w-full h-auto rounded-lg hover:scale-95 transition-all duration-300"
             />
-            <div className="absolute bottom-0 left-0 right-0 bg-white text-center px-4 py-8 shadow-lg rounded-md md:w-3/4 mx-auto">
+            <div className="absolute bottom-0 left-0 right-0 bg-white dark:bg-grey text-center px-4 py-8 shadow-lg rounded-md md:w-3/4 mx-auto">
               <h3 className="text-lg font-semibold text-neutralGrey">
                 {media.title}
               </h3>
-              <div className="flex items-center justify-center gap-8">
+              <div className="flex items-center justify-center gap-8 bg-white dark:bg-grey">
                 <a
                   href="/"
                   className="font-bold text-brandPrimary hover:text-neutral-700">

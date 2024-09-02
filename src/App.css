@@ -29,3 +29,9 @@ header {
     transform: rotate(360deg);
   }
 }
+.dark .bg-brandPrimary {
+  background-color: #333; /* warna background gelap */
+}
+.dark .text-white {
+  color: #fff;
+}

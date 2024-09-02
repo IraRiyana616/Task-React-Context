@@ -29,21 +29,24 @@ const Services = () => {
     },
   ];
   return (
-    <div className=" mx-auto " id="service" style={{ marginTop: '90px' }}>
+    <div
+      className=" mx-auto bg-white dark:bg-gray-700 "
+      id="service"
+      style={{ marginTop: '82px' }}>
       <Navbar />
       {/* About Services */}
-      <div className="px-16 lg:px:14 py-7 max-w-screen-2xl mx-auto my-8 bg-brandPrimary ">
-        <div className=" flex flex-col md:flex-row justify-between items-center gap-12">
+      <div className="px-16 lg:px:14 py-7 max-w-screen-2xl mx-auto my-8 bg-brandPrimary dark:bg-brandPrimary">
+        <div className=" flex flex-col md:flex-row justify-between items-center gap-12 ">
           <div>
             <img src={serviceImg} alt="" />
           </div>
-          <div className="md:w-3/5 mx-auto">
+          <div className="md:w-3/5 mx-auto ">
             <h2 className="text-custom-30 text-black font-semibold mb-4 md:w-5/5">
               Selamat datang di Layanan Bantuan{' '}
               <span className="text-white leading-snug"> PaDi UMKM </span>, Ada
               yang bisa kami bantu ?
             </h2>
-            <div className="relative w-full max-w-xs">
+            <div className="relative w-full max-w-xs ">
               <input
                 type="text"
                 className="w-full pl-4 pr-10 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-brandPrimary"
@@ -57,8 +60,8 @@ const Services = () => {
         </div>
       </div>
       {/* Card */}
-      <div className="text-center my-8">
-        <h2 className="text-custom-30 font-neutralGrey font-semibold mb-2">
+      <div className="text-center my-8 bg-white dark:bg-gray-700">
+        <h2 className="text-custom-30 font-neutralGrey font-semibold mb-2 text-black dark:text-white">
           Pilih Topik Sesuai Kendalamu
         </h2>
       </div>
@@ -70,7 +73,7 @@ const Services = () => {
             className="
             text-center mx-auto rounded-md shadow-lg cursor-pointer 
             hover:-translate-y-5 hover:border-b-4 hover:border-indigo-700 
-            transition-all duration-300 border border-grey900"
+            transition-all duration-300 border border-grey900 bg-white dark:bg-grey"
             style={{ width: '350px', height: '190px', padding: '8px 4px' }}>
             <div className="bg-[#E8F5E9] mb-4 h-14 w-14 mx-auto rounded-tl-3xl rounded-br-3xl flex items-center justify-center">
               <img src={service.image} alt="" className="w-[55px] h-[55px]" />

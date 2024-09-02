@@ -6,8 +6,11 @@ import banner2 from '/src/assets/images/penjual.png';
 import Navbar from '/src/component/header/Navbar';
 
 const Home = () => {
+  // Ambil tema dari localStorage
+  const theme = localStorage.getItem('theme') || 'light';
+
   return (
-    <div className="bg-brandPrimary " id="/home">
+    <div className={`bg-brandPrimary dark:bg-brandPrimary`} id="/home">
       <Navbar />
       <div className="px-4 lg:px-14 max-w-screen-2xl mx-auto min-h-screen h-screen">
         <Carousel className="w-full max-auto">
@@ -18,11 +21,11 @@ const Home = () => {
             </div>
             {/*Text*/}
             <div>
-              <h1 className="text-custom-40 font-semibold mb-8 text-black leading-snug">
+              <h1 className="text-custom-40 font-semibold mb-8 text-black leading-snug dark:text-white">
                 <span className="text-white leading-snug"> PaDi UMKM </span>{' '}
-                Hadir SebagaiSolusi Bisnis bagi UMKM, BUMN dan Pemerintah{' '}
+                Hadir Sebagai Solusi Bisnis bagi UMKM, BUMN dan Pemerintah
               </h1>
-              <p className="text-black text-base mb-9">
+              <p className="text-black text-base mb-9 dark:text-white">
                 Mempertemukan UMKM berkualitas dengan perusahaan BUMN maupun
                 Swasta untuk mendapatkan transaksi dengan harga dan kualitas
                 terbaik.
@@ -36,11 +39,11 @@ const Home = () => {
             </div>
             {/*Text*/}
             <div>
-              <h1 className="text-custom-40 font-semibold mb-8 text-black leading-snug">
+              <h1 className="text-custom-40 font-semibold mb-8 text-black leading-snug dark:text-white">
                 Yuk jadi vendor langganan BUMN bersama{' '}
-                <span className="text-white leading-snug"> PaDi UMKM </span>{' '}
+                <span className="text-white leading-snug"> PaDi UMKM </span>
               </h1>
-              <p className="text-black text-base mb-9">
+              <p className="text-black text-base mb-9 dark:text-white">
                 Bersama kita majukan perekonomian Indonesia
               </p>
             </div>
