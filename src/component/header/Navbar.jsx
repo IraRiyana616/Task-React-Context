@@ -1,11 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import { ThemeContext } from '/src/context/ThemeContext'; // Import ThemeContext
 import logo from '/src/assets/images/logo.png';
 
 const Navbar = () => {
   const [isSticky, setIsSticky] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-  const [theme, setTheme] = useState('light');
+  const { theme, toggleTheme } = useContext(ThemeContext); // Access theme and toggleTheme from context
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -22,20 +23,6 @@ const Navbar = () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
-
-  useEffect(() => {
-    // Cek tema yang tersimpan di localStorage
-    const savedTheme = localStorage.getItem('theme') || 'light';
-    setTheme(savedTheme);
-    document.documentElement.className = savedTheme;
-  }, []);
-
-  const handleThemeToggle = () => {
-    const newTheme = theme === 'light' ? 'dark' : 'light';
-    setTheme(newTheme);
-    localStorage.setItem('theme', newTheme);
-    document.documentElement.className = newTheme;
-  };
 
   const handleLogout = () => {
     setIsLoading(true);
@@ -87,7 +74,7 @@ const Navbar = () => {
           </ul>
           <div className="space-x-12 hidden lg:flex items-center">
             <button
-              onClick={handleThemeToggle}
+              onClick={toggleTheme}
               className="ml-4 py-2 px-4 border rounded text-gray-900 dark:text-white dark:border-brandPrimary">
               {theme === 'light' ? 'Dark Mode' : 'Light Mode'}
             </button>
