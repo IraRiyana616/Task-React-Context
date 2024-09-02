@@ -2,6 +2,7 @@ import React from 'react';
 import { FaSearch } from 'react-icons/fa';
 import serviceImg from '/src/assets/images/hero.svg';
 import Footers from '/src/component/footer/Footer';
+import Navbar from '/src/component/header/Navbar';
 
 const Services = () => {
   const services = [
@@ -29,6 +30,7 @@ const Services = () => {
   ];
   return (
     <div className=" mx-auto " id="service" style={{ marginTop: '90px' }}>
+      <Navbar />
       {/* About Services */}
       <div className="px-16 lg:px:14 py-7 max-w-screen-2xl mx-auto my-8 bg-brandPrimary ">
         <div className=" flex flex-col md:flex-row justify-between items-center gap-12">

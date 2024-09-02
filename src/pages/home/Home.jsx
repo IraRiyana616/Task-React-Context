@@ -3,10 +3,12 @@ import { Carousel } from 'flowbite-react';
 import 'flowbite/dist/flowbite.css';
 import banner1 from '/src/assets/images/beranda.png';
 import banner2 from '/src/assets/images/penjual.png';
+import Navbar from '/src/component/header/Navbar';
 
 const Home = () => {
   return (
-    <div className="bg-brandPrimary " id="home">
+    <div className="bg-brandPrimary " id="/home">
+      <Navbar />
       <div className="px-4 lg:px-14 max-w-screen-2xl mx-auto min-h-screen h-screen">
         <Carousel className="w-full max-auto">
           {/*Slide 1*/}

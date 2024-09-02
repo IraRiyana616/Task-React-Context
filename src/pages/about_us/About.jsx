@@ -2,10 +2,11 @@ import React from 'react';
 import Footers from '/src/component/footer/Footer';
 import aboutImg from '/src/assets/images/penjual.png';
 import aboutImg2 from '/src/assets/images/about.png';
-
+import Navbar from '/src/component/header/Navbar';
 const About = () => {
   return (
     <div id="about" style={{ marginTop: '90px' }}>
+      <Navbar />
       <div className="px-16 lg:px-14 py-7 max-w-screen-2xl mx-auto my-8 bg-brandPrimary">
         <div className="flex flex-col md:flex-row justify-between items-center gap-12">
           <div className="md:w-3/5 mx-auto">

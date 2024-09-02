@@ -1,5 +1,6 @@
 import React from 'react';
 import Footers from '/src/component/footer/Footer';
+import Navbar from '/src/component/header/Navbar';
 import media1 from '/src/assets/images/media1.jpg';
 import media2 from '/src/assets/images/media2.jpg';
 import media3 from '/src/assets/images/media3.jpg';
@@ -28,6 +29,7 @@ const Media = () => {
 
   return (
     <div className="" id="media" style={{ marginTop: '120px' }}>
+      <Navbar />
       <div className="text-center md:w-1/2 mx-auto">
         <h2 className="text-4xl text-neutralDGrey font-semibold mb-4">Media</h2>
         <p className="text-sm text-neutralGrey mb-8 md:w-3/4 mx-auto">
